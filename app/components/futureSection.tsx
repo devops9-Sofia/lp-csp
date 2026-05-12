@@ -46,11 +46,13 @@ export function FutureSection() {
                                     />
                                 </div>
 
-                                <p className="text-center flex-1">
+                                <div className="flex flex-1 justify-center items-center">
+                                    <p  className="text-center">
                                     <span className="font-semibold ">{it.strong}</span>
                                     {" "}
                                     {it.text}
-                                </p>
+                                    </p>
+                                </div>
 
                             </li>
                         ))}

@@ -31,13 +31,13 @@ export function SolutionsSection() {
                             {benefits.map((b) => (
                                 <li key={b.title} className="relative flex gap-3">
                                     <div
-                                        className="absolute left-0 top-0 h-full w-2 rounded-full bg-purple-700">
+                                        className="absolute mt-1 left-0 top-0 h-[85%] w-3 rounded-sm  bg-purple-700">
                                     </div>
 
 
-                                    <div className=" px-5">
-                                        <div className="font-semibold text-lg">{b.title}</div>
-                                        <div className=" text-sm text-muted-foreground">{b.desc}</div>
+                                    <div className="pl-5 pr-8">
+                                        <h1 className="font-semibold text-lg">{b.title}</h1>
+                                        <h2 className=" text-sm text-muted-foreground">{b.desc}</h2>
                                         <a href={b.link} className="text-xs text-blue-600 ">{b.link}</a>
                                     </div>
                                 </li>
