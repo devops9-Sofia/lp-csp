@@ -18,7 +18,6 @@ export default function Home() {
         <Hero/>
         <FutureSection/>
         <SolutionsSection/>
-        <CompatibilityBanner/>
         <DifferentialsSection/>
         <BusinessModelSolutionSection/>
         <FormSection/>

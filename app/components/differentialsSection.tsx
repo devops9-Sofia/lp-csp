@@ -1,41 +1,43 @@
 import { Button } from "@/components/ui/button";
 import { MdArrowOutward } from "react-icons/md";
+import { CompatibilityBanner } from "./compatibilityBanner";
 
 export function DifferentialsSection() {
     return (
-        <section id="diferenciais" className="py-10 ">
-            <div className="mx-auto max-w-7xl p-12 bg-purple-700 rounded-3xl">
-                <div>
-                    <h2 className="font-display text-3xl font-semibold text-white"> Diferenciais </h2>
+        <section id="diferenciais" className="pt-16">
+
+            <div className="mx-auto flex flex-col ">
+
+                <div className="flex justify-center items-center">
+                    <h2 className="font-display text-3xl font-semibold text-white bg-purple-950 p-4 rounded-2xl"> Diferenciais <span className="text-amber-600">CSP</span>
+                    </h2>
                 </div>
 
-                <div className="mt-6 gap-6 max-w-[95%] mx-auto">
-                    <FirstCard image="/card-elements/img-firstCard.png" title="Criamos seu" highlight="ativo digital"
-                        desc="O seu estoque físico direto para o digital com todas as especificações técnicas, compatibilidades, descrições. Para você vender online." />
-                </div>
+                <CompatibilityBanner />
 
-                <div className="grid grid-cols-[2fr_0.80fr] max-w-[95%] gap-5 bg-white/5 border rounded-3xl border-white/10 p-8 backdrop-blur mt-6 mx-auto">
-                    <SecondCard image="/card-elements/img-secondCard.svg"
-                        title="Adquira uma" highlight="Precificação" desc="Acompanhe preços e margens para equilibrar competitividade no mercado e rentabilidade na operação" />
-                    <ThirdCard title="Estudo de" highlight="precificação" desc="Compare preços, acompanhe margens e encontre o posicionamento ideal para vender com mais competitividade e rentabilidade," />
-                </div>
+                <div className=" flex flex-col gap-10 py-10 my-5">
 
-                <div className="my-6 grid grid-cols-[0.90fr_.90fr] max-w-[95%] gap-3 mx-auto">
-                    <FourthCard
-                        csp="CSP | PERFORMANCE"
-                        title="Escale a"
-                        highlight="perfomance"
-                        text="das suas vendas"
-                        desc="Eleve sua visibilidade no digital aumentando suas vendas e o seu faturamento. Tráfego pago, conversão e catálogo inteligente para escalar com margem e ROI."
+                    <div className="flex  gap-6 max-w-[80%] bg-purple-950 rounded-r-2xl">
+                        <FirstCard image="/card-elements/img-firstCard.png" title="Criamos seu" highlight="ativo digital"
+                            desc="O seu estoque físico direto para o digital com todas as especificações técnicas, compatibilidades, descrições. Para você vender online." />
+                    </div>
 
-                    />
-                    <FifthCard
-                        csp="CSP | BUSCA POR PLACA"
-                        title="Venda a peça certa pela"
-                        highlight="busca por placa"
-                        text="!"
-                        desc="Implemente em sua plataforma nossa funcionalidade, Ache qualquer peça do seu estoque pela placa do veiculo do seu cliente"
-                    />
+                    <div className="mt-6  max-w-[80%] bg-purple-950 rounded-l-2xl ml-auto">
+                        <SecondCard image="/card-elements/img-secondCard.svg"
+                            title="inteligente para canais digitais" highlight="Precificação" desc="Calcule seus preços de vendas de produtos para os Marketplaces e E-Commerce garantindo margem e rentabilidade antes mesmo de anunciar. Compare preços, acompanhe margens e encontre o posicionamento ideal para vender com mais competitividade e rentabilidade.
+
+" />
+                    </div>
+
+                    <div className="my-6 max-w-[95%] gap-3 bg-purple-950 rounded-r-2xl">
+
+                        <FifthCard
+                            csp="CSP | BUSCA POR PLACA"
+                            title="Venda a peça certa pela"
+                            highlight="busca por placa!"
+                            desc="Implemente em seu canal de vendas a funcionalidade da busca por placa. Encontre e valide a peça correta do seu estoque pela placa do veículo e garanta uma venda assertiva e sem devoluções."
+                        />
+                    </div>
                 </div>
             </div>
         </section>
@@ -44,7 +46,7 @@ export function DifferentialsSection() {
 
 function FirstCard({ image, title, highlight, desc }: { image: string; title: string; highlight: string; desc: string }) {
     return (
-        <div className="rounded-3xl grid grid-cols-2 gap-3 bg-white/5 border border-white/10 p-8 backdrop-blur">
+        <div className="rounded-r-3xl grid grid-cols-2 gap-3  p-8 ">
             <img src={image} />
 
             <div className="px-3">
@@ -66,12 +68,11 @@ function FirstCard({ image, title, highlight, desc }: { image: string; title: st
 
 function SecondCard({ image, title, highlight, desc }: { image: string; title: string; highlight: string; desc: string }) {
     return (
-        <div className="rounded-3xl  gap-3 grid grid-cols-[1fr_1fr] bg-white/5 border border-white/10 p-8 backdrop-blur">
-            <div>
-
+        <div className="rounded-r-3xl  gap-3 flex justify-end  p-8 ">
+            <div className="max-w-[40%]">
                 <span className="text-xs font-thin uppercase tracking-wider text-brand-foreground/75">CSP | PRICING</span>
-                <h3 className="mt-3 font-display text-2xl font-semibold text-white">{title}{" "}
-                    <span className="text-amber-600">{highlight}</span>{" "} mais estratégica
+                <h3 className="mt-3 font-display text-2xl font-semibold text-white">
+                    <span className="text-amber-600">{highlight}</span>{" "}{title}
                 </h3>
                 <p className="mt-3 text-brand-foreground/75">{desc}</p>
 
@@ -81,64 +82,25 @@ function SecondCard({ image, title, highlight, desc }: { image: string; title: s
                 </Button>
             </div>
 
-            <img src={image} alt="" className="h-full w-full" />
+            <img src={image} alt="" className=" w-88 h-88 mr-[10%]" />
         </div>)
 
 }
 
-function ThirdCard({ title, highlight, desc }: any) {
+function FifthCard({ title, highlight, desc, csp }: any) {
     return (
-        <div className="rounded-3xl  gap-3  bg-white/5 border border-white/10 p-8 backdrop-blur" >
-            <div>
-                <span className="flex text-xs font-thin uppercase tracking-wider text-brand-foreground/75 justify-between">CSP | PRICING <img src="/icons/logotipo-CSP-2 5.svg" alt="" className="h-10 w-10" /></span>
-                <h3 className="mt-3 font-display text-2xl font-semibold text-white">{title}{" "}
-                    <span className="text-amber-600">{highlight}</span>{" "} do mercado
-                </h3>
-                <p className="mt-3 text-brand-foreground/75">{desc}</p>
-            </div>
-
-        </div>
-    )
-}
-
-function FourthCard({ title, highlight, text, desc, csp }: any) {
-    return (
-        <div className="rounded-3xl bg-white/5 border border-white/10 p-7 backdrop-blur flex flex-col">
-            <div>
-                <span className="flex text-xs font-thin uppercase tracking-wider text-brand-foreground/75 justify-between">{csp}</span>
+        <div className="rounded-r-3xl flex  justify-center p-7 ">
+            <div className="w-[50%]">
+                <span className="flex text-xs font-thin uppercase tracking-wider text-brand-foreground/75">{csp}</span>
                 <h4 className="mt-3 font-display text-2xl font-semibold text-white">{title}{" "}
-                    <span className="text-amber-600">{highlight}</span> {" "}
-                    {text}</h4>
-                <div className="mt-3 grid grid-cols-[1fr_1fr]">
-                    <p className="text-brand-foreground/75">{desc}</p>
-                    <img src="/card-elements/img-fourthCard.svg" alt="" />
-                </div>
-
-            </div>
-        </div>
-    );
-}
-
-function FifthCard({ title, highlight, text, desc, csp }: any) {
-    return (
-        <div className="relative rounded-3xl grid grid-cols-[1.20fr_0.80fr] bg-white/5 border border-white/10 p-7 backdrop-blur">
-            <div>
-                <span className="flex text-xs font-thin uppercase tracking-wider text-brand-foreground/75 justify-between">{csp}</span>
-                <h4 className="mt-3 font-display text-2xl font-semibold text-white">{title}{" "}
-                    <span className="text-amber-600">{highlight}</span> {" "}
-                    {text}
+                    <span className="text-amber-600 uppercase">{highlight}</span> {" "}
                 </h4>
                 <p className="mt-3 text-brand-foreground/75">{desc}</p>
 
             </div>
 
 
-            <img src="/card-elements/img-fifthCard.svg" alt=""
-                className="absolute
-                right-0
-                bottom-0
-                w-60
-                translate-x-[15%]" />
+            <img src="/card-elements/img-fifthCard.svg" alt="" className="w-[15rem] h-[15rem]" />
 
 
 

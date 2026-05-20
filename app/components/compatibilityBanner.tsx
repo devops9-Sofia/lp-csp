@@ -3,9 +3,9 @@ import { MdArrowOutward } from "react-icons/md";
 
 export function CompatibilityBanner() {
   return (
-    <section className="py-10 ">
+    <section className="pt-10 ">
       
-      <div className="relative overflow-visible bg-purple-700 mx-auto max-w-7xl min-h-80 px-6 flex gap-10 items-center text-brand-foreground rounded-3xl">
+      <div className="relative overflow-visible bg-purple-950 ml-auto max-w-7xl min-h-80 px-6 flex gap-10 items-center text-brand-foreground rounded-l-3xl">
         
         <div className="my-10 ml-15 w-1/2">
           
@@ -33,7 +33,7 @@ export function CompatibilityBanner() {
             right-0
             bottom-0
             w-100
-            -translate-x-1/2
+            -translate-x-1/5
             translate-y-1/5" />
           
 

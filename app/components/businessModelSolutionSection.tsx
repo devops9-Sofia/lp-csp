@@ -11,7 +11,7 @@ const plans = [
 
 export function BusinessModelSolutionSection() {
   return (
-    <section id="planos" className="py-10">
+    <section id="planos" className="py-5">
 
       <div className="mx-auto max-w-7xl px-6">
 
