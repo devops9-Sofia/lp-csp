@@ -10,9 +10,20 @@ export function ContentSection() {
                 <div className="grid grid-cols-2 gap-5 items-center bg-gray-200 p-6 rounded-3xl">
 
                     <div className="aspect-video rounded-3xl bg-muted shadow-card grid place-items-center">
-                        <div className="h-16 w-16 rounded-full bg-gradient-cta grid place-items-center">
-                            <Play className="h-6 w-6 text-cta-foreground fill-current" />
-                        </div>
+                       
+                            <iframe 
+                            width="560" height="318" 
+                            src="https://www.youtube.com/embed/OWR_5irb9Mc?si=rmmV481m65SNPfk7" 
+                            title="YouTube video player"  
+                            allow="accelerometer; autoplay; 
+                            clipboard-write; encrypted-media; 
+                            gyroscope; picture-in-picture; 
+                            web-share" 
+                            referrerPolicy="strict-origin-when-cross-origin" 
+                            allowFullScreen
+                            className="rounded-3xl"
+                            ></iframe>
+
                     </div>
 
                     <div>
@@ -54,17 +65,20 @@ export function ContentSection() {
                         
                         <div className="mt-2">
 
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/HSVZLv2Z5Wo?si=Tc3lAEuVVAeBTskr" 
-                                title="YouTube video player" 
-                                frameBorder="0" allow="accelerometer; 
-                                autoplay; clipboard-write; encrypted-media; 
-                                gyroscope; picture-in-picture; web-share" 
-                                referrerPolicy="strict-origin-when-cross-origin" 
-                                allowFullScreen> 
-                            </iframe>
+                    <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/k3WPxt-lHC8?si=GVFPT-C8HBmSrYJy" 
+                    title="YouTube video player" 
+                    allow="accelerometer; 
+                    autoplay; 
+                    clipboard-write; 
+                    encrypted-media; 
+                    gyroscope; 
+                    picture-in-picture; 
+                    web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen>
+                        
+                    </iframe>
 
                         </div>
                     </div>

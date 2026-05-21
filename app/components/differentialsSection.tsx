@@ -31,7 +31,7 @@ export function DifferentialsSection() {
 
                     <div className="my-6 max-w-[95%] gap-3 bg-purple-950 rounded-r-2xl">
 
-                        <FifthCard
+                        <ThirdCard
                             csp="CSP | BUSCA POR PLACA"
                             title="Venda a peça certa pela"
                             highlight="busca por placa!"
@@ -76,10 +76,12 @@ function SecondCard({ image, title, highlight, desc }: { image: string; title: s
                 </h3>
                 <p className="mt-3 text-brand-foreground/75">{desc}</p>
 
-                <Button className="mt-6 bg-gradient-cta text-cta-foreground rounded-full px-6 hover:opacity-90">
-                    Agendar Diagnóstico
+                <Button className="mt-6 bg-gradient-cta text-cta-foreground rounded-full p-4 hover:opacity-90">
+                    Fale com um Executivo
                     <MdArrowOutward className="ml-1 h-4 w-4" />
                 </Button>
+
+                <img src="/icons/logo-csp-plataforma.svg" alt="csp-plataforma" className="mt-4" />
             </div>
 
             <img src={image} alt="" className=" w-88 h-88 mr-[10%]" />
@@ -87,7 +89,7 @@ function SecondCard({ image, title, highlight, desc }: { image: string; title: s
 
 }
 
-function FifthCard({ title, highlight, desc, csp }: any) {
+function ThirdCard({ title, highlight, desc, csp }: any) {
     return (
         <div className="rounded-r-3xl flex  justify-center p-7 ">
             <div className="w-[50%]">
