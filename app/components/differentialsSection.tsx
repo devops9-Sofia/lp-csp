@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { MdArrowOutward } from "react-icons/md";
 import { CompatibilityBanner } from "./compatibilityBanner";
@@ -56,7 +57,14 @@ function FirstCard({ image, title, highlight, desc }: { image: string; title: st
                 </h3>
                 <p className="mt-3 text-brand-foreground/75">{desc}</p>
 
-                <Button className="mt-6 bg-gradient-cta text-cta-foreground rounded-full px-6 hover:opacity-90">
+                <Button
+                    onClick={() => {
+                        window.gtag?.("event", "btn_diagnostico_ativo_digital", {
+                            event_category: "diagnostico_ativo_digital",
+                            event_label: `User clicked on button -diagnostico-ativo-digital`,
+                        });
+                    }}
+                    className="mt-6 bg-gradient-cta text-cta-foreground rounded-full px-6 hover:opacity-90">
                     Agendar Diagnóstico
                     <MdArrowOutward className="ml-1 h-4 w-4" />
                 </Button>
@@ -76,7 +84,14 @@ function SecondCard({ image, title, highlight, desc }: { image: string; title: s
                 </h3>
                 <p className="mt-3 text-brand-foreground/75">{desc}</p>
 
-                <Button className="mt-6 bg-gradient-cta text-cta-foreground rounded-full p-4 hover:opacity-90">
+                <Button
+                    onClick={() => {
+                        window.gtag?.("event", "btn_executivo_diferencial", {
+                            event_category: "btn_executivo_differencial",
+                            event_label: `User clicked on link`,
+                        });
+                    }}
+                    className="mt-6 bg-gradient-cta text-cta-foreground rounded-full p-4 hover:opacity-90">
                     Fale com um Executivo
                     <MdArrowOutward className="ml-1 h-4 w-4" />
                 </Button>

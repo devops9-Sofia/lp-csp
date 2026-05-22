@@ -40,7 +40,14 @@ export function BusinessModelSolutionSection() {
 
                     <p className="text-center text-[20px] text-gray-500 mt-2">Entenda qual formato faz mais sentido para o seu negócio</p>
 
-                    <Button className="mt-2 bg-gradient-cta text-cta-foreground rounded-full p-6 hover:opacity-90">
+                    <Button
+                        onClick={() => {
+                            window.gtag?.("event", "btn_executivo_business", {
+                                event_category: "btn_executivo_business",
+                                event_label: `user clicked on button -fale com um executivo-`,
+                            });
+                        }}
+                        className="mt-2 bg-gradient-cta text-cta-foreground rounded-full p-6 hover:opacity-90">
                         Fale com um Executivo
                         <MdArrowOutward className="ml-1 h-4 w-4" />
                     </Button>
@@ -125,7 +132,14 @@ export function BusinessModelSolutionSection() {
                                         ))}
                                     </ul>
 
-                                    <Button className="mt-6 bg-gradient-cta text-cta-foreground rounded-lg p-4 h-fit hover:opacity-90">
+                                    <Button
+                                        onClick={() => {
+                                            window.gtag?.("event", "btn_solutions_cards", {
+                                                event_category: "solution_button_card",
+                                                event_label: `User clicked on one of the solutions button`,
+                                            });
+                                        }}
+                                        className="mt-6 bg-gradient-cta text-cta-foreground rounded-lg p-4 h-fit hover:opacity-90">
                                         <span className="text-sm text-center leading-tight whitespace-normal">
                                             {p.button}
                                         </span>

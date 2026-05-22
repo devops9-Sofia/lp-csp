@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -19,7 +20,14 @@ export function CompatibilityBanner() {
             <span className="font-medium text-amber-600">Plataforma | CSP</span>
           </p>
           
-          <Button className="mt-6 bg-gradient-cta text-cta-foreground rounded-full px-6 hover:opacity-90">
+          <Button
+           onClick={() => {
+              window.gtag?.("event", "btn_diagnostico_compatibilidade", {
+                event_category: "diagnostico_compatibilidade",
+                event_label: `User clicked on button -agendar diagnostico-`,
+              });
+            }} 
+          className="mt-6 bg-gradient-cta text-cta-foreground rounded-full px-6 hover:opacity-90">
             Agendar Diagnóstico 
             <MdArrowOutward className="ml-1 h-4 w-4" />
           </Button>

@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 
 
@@ -29,7 +30,14 @@ export function CtaSection() {
                             </p>
 
                             <div className="items-center justify-center">
-                                <Button className="mt-5 rounded-full bg-gradient-cta text-white hover:opacity-90 p-6 w-[50%] ">
+                                <Button
+                                    onClick={() => {
+                                        window.gtag?.("event", "btn_diagnostico_cta", {
+                                            event_category: "btn_diagnostico_cta",
+                                            event_label: `User clicked on button -a gendar diagnostico-`,
+                                        });
+                                    }}
+                                    className="mt-5 rounded-full bg-gradient-cta text-white hover:opacity-90 p-6 w-[50%] ">
                                     Agendar Diagnóstico
                                 </Button>
                             </div>

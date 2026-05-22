@@ -45,6 +45,12 @@ export function Hero() {
 
                 <div className="mt-8 flex flex-wrap gap-3">
                     <Button
+                        onClick={() => {
+                            window.gtag?.("event", "btn_agendar_diagnostico", {
+                                event_category: "btn_hero_diagnostico",
+                                event_label: `User clicked on button -agendar-diagnostico-`,
+                            });
+                        }}
                         size="lg"
                         className="bg-gradient-cta text-cta-foreground hover:opacity-90 rounded-full px-7 h-12"
                     >
@@ -53,6 +59,12 @@ export function Hero() {
                     </Button>
 
                     <Button
+                        onClick={() => {
+                            window.gtag?.("event", "btn_conheca_solucoes", {
+                                event_category: "btn_hero_solucoes",
+                                event_label: `User clicked on solution button`,
+                            });
+                        }}
                         size="lg"
                         className="bg-gradient-cta text-cta-foreground hover:opacity-90 rounded-full px-7 h-12"
                     >
