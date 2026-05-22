@@ -53,7 +53,7 @@ export function BusinessModelSolutionSection() {
                             className={`
                             h-2 rounded-full transition-all duration-300
                             ${activeCard === index
-                                    ? "w-6 bg-purple-500"
+                                    ? "w-6 bg-purple-950"
                                     : "w-2 bg-gray-300"
                                 }
                             `}

@@ -23,7 +23,7 @@ export function Hero() {
         <section className="grid grid-cols-2 w-full px-4  overflow-hidden gap-1 ">
 
             {/* <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_30%,white,transparent_40%)] rounded-lg" /> */}
-            <div className="bg-gradient-hero text-brand-foreground flex flex-col justify-center p-12 rounded-b-3xl">
+            <div className="bg-purple-950 text-brand-foreground flex flex-col justify-center p-12 rounded-b-3xl">
 
 
                 <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] whitespace-nowrap">

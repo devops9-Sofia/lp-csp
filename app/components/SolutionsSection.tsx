@@ -38,7 +38,7 @@ export function SolutionsSection() {
                                     onClick={() => setActiveBenefit(index)}
                                     className="relative flex gap-3 cursor-pointer transition-all hover:translate-x-1">
                                     <div
-                                        className={`absolute mt-1 left-0 top-0 h-[85%] w-3 rounded-sm  ${activeBenefit === index ? "bg-purple-700" : "bg-gray-300"}`}>
+                                        className={`absolute mt-1 left-0 top-0 h-[85%] w-3 rounded-sm  ${activeBenefit === index ? "bg-purple-950" : "bg-gray-300"}`}>
                                     </div>
 
 

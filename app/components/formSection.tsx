@@ -6,7 +6,7 @@ import { IoMdSend } from "react-icons/io";
 export function FormSection() {
     return (
         <section className="py-10 ">
-            <div className="flex mx-auto max-w-7xl bg-gradient-hero rounded-3xl p-6 items-center text-brand-foreground justify-center">
+            <div className="flex mx-auto max-w-7xl bg-purple-950 rounded-3xl p-6 items-center text-brand-foreground justify-center">
                 <div className="flex gap-10 items-center">
                     <div >
                         <iframe
